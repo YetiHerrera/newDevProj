@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: url(minecraf1.jpg);
+            
+        }
+        .form-register{
+            width: 400px;
+            background: #53d078;
+            padding: 50px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 5px;
+        }
+       .form-register h1{
+        font-size: 29px;
+        margin-bottom: 30px;
+       } 
+        .controls {
+         width: 100%;
+         padding: 10px;
+         border-radius: 10px;
+         margin-bottom: 16px;
+         border: 2px solid #54d1f0;
+         font-size: 16px; 
+        }
+        .form-register .botons {
+            width: 50%;
+            background: #fcd47f;
+            border: none;
+            padding: 5px;
+            margin: 16px 0;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="form-register">
+        <h1> Registro de Formulario     </h1>
+        
+        <input class="controls" type="text" name="nombres" id="nombres" placeholder=" Ingrese su Nombre">
+        <input class="controls" type="int" name="edad" id="edad" placeholder=" Ingrese su  Edad">
+        <input class="controls" type="imail" name="correo" id="correo" placeholder=" Ingrese su Email">
+
+        <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones </a></p>
+        <input class="botons"   type="submit" value="Registrar" onclick="mostrarusuario()" >
+        <p><a href="#"> Ya tengo cuenta </a></p>
+    </section>
+    
+    <script>
+        function mostrarusuario () {
+            var nombreest=document.getElementById("nombres").value;
+            var edadesest=document.getElementById("edad").value;
+            var correosest=document.getElementById("correo").value;
+            
+            if (nombreest ==" "){
+                alert ("Es obligatorio el Nombre");
+                document.getElementById ("nombres").focus ();
+            }else {
+                if (correosest ==" "){
+                alert ("Es obligatorio el Correo");
+                document.getElementById ("correo").focus ();
+
+            }else {
+                alert (nombreest +"  "+ edadesest +"  "+ correosest);
+                document.getElementById ("nombres").value= " ";
+                document.getElementById ("edad").value = " ";
+                document.getElementById ("correo").value = " ";
+                document.getElementById ("nombres").focus ();
+            }
+            }
+            
+
+        }
+    </script>
+
+</body>
+</html>
